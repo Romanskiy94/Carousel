@@ -1,0 +1,70 @@
+@import "reset.css";
+
+body{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.carouselWrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+
+}
+
+.button:active{
+
+}
+
+.slidesContainer{
+    width: 600px;
+    height: 300px;
+    position: relative;
+
+}
+
+.slide{
+    transition-property: all;
+    transition-delay:  0.4s;
+    display: none;
+    position: absolute;
+    box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.75);
+}
+
+.slide img{
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+.visibleSlide{
+    display: block;
+    height: 300px;
+    width: 400px;
+}
+
+.currentSlide{
+    right: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.prevSlide{
+    right: 0;
+    transform: translateY(-50%) translateX(100%) scale(0.8);
+}
+.nextSlide{
+    transform-origin: center;
+    right: 0;
+    transform:translateX(-50%) scale(0.8);
+}
+.prevSlide, .nextSlide{
+    top: 50%;
+
+}
